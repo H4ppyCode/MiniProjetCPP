@@ -67,19 +67,19 @@ int main() {
         case 16:
             if (baseAfter == 2) {
                 char charHex[200];
-                std::cout << "Entrée le nombre à convertir: ";
+                std::cout << "Entrer le nombre à convertir: ";
                 std::cin >> charHex;
                 std::cout << "New number : " << HexToBin(charHex);
             } // char -> long long 
             if (baseAfter == 8) {
                 char charHex[200];
-                std::cout << "Entrée le nombre à convertir: ";
+                std::cout << "Entrer le nombre à convertir: ";
                 std::cin >> charHex;
                 std::cout << "New number : " << HexToOct(charHex);
             } // char -> long long int
             if (baseAfter == 10) {
                 std::string charDec;
-                std::cout << "Entrée le nombre à convertir: ";
+                std::cout << "Entrer le nombre à convertir: ";
                 std::cin >> charDec;
                 std::cout << "New number : " << HexToDec(charDec);
             } // string -> int
