@@ -3,7 +3,7 @@
 #include "functions/dec.h"
 #include "functions/hex.h"
 #include "functions/octo.h"
-
+//Devlopped By Atreus & YGRECO 
 float verification( long long value){
     if (value == 2 || value == 8 || value == 10 || value == 16){
             return false;
