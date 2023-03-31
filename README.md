@@ -16,7 +16,6 @@ méthodes de conversion appropriées.
 4. Afficher le résultat de la conversion dans la console.
 5. Gérer les erreurs d’entrée utilisateur et les exceptions.
 Exemples d’utilisation (CLI)
-• ./base_converter 42 10 2: Convertit le nombre 42 de la base 10 à la
-base 2 et affiche le résultat.
-• ./base_converter 1A 16 8: Convertit le nombre 1A de la base 16 à la
-base 8 et affiche le résultat.
+• .Choisir la base de son nombre (2,8,10,16)
+• .Chosir la destination de son nombre (2,8,10,16)
+• .Entrée sa valeur 
