@@ -1,4 +1,12 @@
 #include <iostream>
+#include "functions/bin.h"
+#include "functions/dec.h"
+#include "functions/hex.h"
+#include "functions/octo.h"
+#include "functions/bin.cpp"
+#include "functions/dec.cpp"
+#include "functions/hex.cpp"
+#include "functions/octo.cpp"
 
 float verification( long long value){
     if (value == 2 || value == 8 || value == 10 || value == 16){
@@ -38,7 +46,8 @@ int main() {
         case 2:
             std::cout << "Entrée la base du nombre apres conversion: ";
             std::cin >> number;
-            if (baseAfter == 8) {std::cout << " 2To8 ";} //long long -> long long int
+            
+            if (baseAfter == 8) {std::cout << BinToOct(1010);} //long long -> long long int
             if (baseAfter == 10) {std::cout << " 2To10 ";} // long long -> int
             if (baseAfter == 16) {std::cout << " 2To16 ";} // long long -> string
             break;
