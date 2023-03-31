@@ -1,4 +1,4 @@
-#include "bin.h"
+#include "dec.h"
 #include <cmath>
 #include <iostream>
 

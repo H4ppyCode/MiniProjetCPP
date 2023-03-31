@@ -1,6 +1,7 @@
 //Les includes
 #include <iostream>
 #include <cmath>
+#include "bin.h"
 using namespace std;
 
 // Fonctions
