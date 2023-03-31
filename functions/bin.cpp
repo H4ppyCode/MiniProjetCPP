@@ -16,10 +16,8 @@ int BinToDec(long long n) {
   return dec;
 }
 string BinToHex(long long n) {
-    // Conversion en décimal
     int dec = BinToDec(n);
 
-    // Conversion en hexadécimal
     string hex = "";
     string hex_table = "0123456789ABCDEF";
     while (dec != 0) {
@@ -43,7 +41,6 @@ long long int BinToOct(long long bin)
  
     place = 1;
  
-    // Binary to octal conversion
     while (bin > 0) {
         rem = bin % 1000;
  

@@ -1,7 +1,13 @@
-#ifndef BINARY_CONVERTER_H
-#define BINARY_CONVERTER_H
+#ifndef CONVERSIONS_H
+#define CONVERSIONS_H
 
-// function prototype
-int BinToDec(long long);
+#include <string>
+
+int BinToDec(long long n);
+
+std::string BinToHex(long long n);
+
+
+long long BinToOct(long long bin);
 
 #endif
