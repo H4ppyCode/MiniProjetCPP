@@ -83,23 +83,3 @@ long long int BinToOct(long long bin)
 
 
 
-int main() {
-    long long n;
-    cout << "Entrez un nombre binaire : ";
-    cin >> n;
-
-    // // Conversion en décimal
-    // int dec = BinToDec(n);
-    // cout << "Le nombre décimal correspondant est : " << dec << endl;
-
-    // Conversion en hexadécimal
-    // string hex = BinToHex(n);
-    // cout << "Le nombre hexadécimal correspondant est : " << hex << endl;
-
-    // Conversion en octal
-    // long long oct = BinToOct(n);
-    // cout << "Le nombre octal correspondant est : " << oct << endl;
-
-    return 0;
-    
-}

@@ -117,7 +117,7 @@ long long int HexToBin(char hex[])
 }
  
 // Function to convert Binary to Octal
-long long int BinToOct(long long bin)
+long long int BinToOct_2(long long bin)
 {
     long long int octal, place;
     int i = 0, rem, val;
@@ -177,20 +177,9 @@ long long int HexToOct(char hex[])
     bin = HexToBin(hex);
  
     // convert Binary to Octal
-    octal = BinToOct(bin);
+    octal = BinToOct_2(bin);
  
     return octal;
 }
 
 
-int main() {
-    std::cout << "HexToDec : " << HexToDec("F5");
-        std::cout << "\n";
-    std::cout << "HexToBin : " << HexToBin("F5");
-        std::cout << "\n";
-    std::cout << "hexToOct : " << HexToOct("F5");
-            std::cout << "\n";
-
-
-    return 0;
-}

@@ -43,22 +43,4 @@ string DecToHex(int dec) {
     return hex;
 }
 
-int main() {
-    // int dec;
-    // cout << "Entrez un nombre décimal : ";
-    // cin >> dec;
 
-    // // Conversion en binaire
-    // long long bin = DecToBin(dec);
-    // cout << "Le nombre binaire correspondant est : " << bin << endl;
-
-    // // Conversion en octal
-    // long long oct = DecToOct(dec);
-    // cout << "Le nombre octal correspondant est : " << oct << endl;
-
-    // // Conversion en hexadécimal
-    // string hex = DecToHex(dec);
-    // cout << "Le nombre hexadécimal correspondant est : " << hex << endl;
-
-    return 0;
-}

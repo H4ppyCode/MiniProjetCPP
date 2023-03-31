@@ -53,23 +53,3 @@ string OctToHex(long long oct) {
     }
     return hex;
 }
-
-int main() {
-    long long oct;
-    cout << "Entrez un nombre octal : ";
-    cin >> oct;
-
-    // // Conversion en binaire
-    // long long bin = OctToBin(oct);
-    // cout << "Le nombre binaire correspondant est : " << bin << endl;
-
-    // // Conversion en décimal
-    // int dec = OctToDec(oct);
-    // cout << "Le nombre décimal correspondant est : " << dec << endl;
-
-    // // Conversion en hexadécimal
-    // string hex = OctToHex(oct);
-    // cout << "Le nombre hexadécimal correspondant est : " << hex << endl;
-
-    return 0;
-}
