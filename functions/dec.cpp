@@ -1,36 +1,64 @@
-#include "dec.h"
-#include <cmath>
 #include <iostream>
+#include <cmath>
+#include <string>
+#include "dec.h"
+using namespace std;
 
-
-int decimalToBinary(int dec, int* bin) {
-    // Affichage du nombre saisi
-    std::cout << "Le nombre saisi est : " << dec << std::endl;
-
-    // Conversion en binaire
-    int i = 0;
-    while (dec > 0) {
-        bin[i] = dec % 2;
-        dec = dec / 2;
-        i++;
+// Fonction pour convertir un nombre décimal en binaire
+long long DecToBin(int dec) {
+    long long bin = 0;
+    int i = 1;
+    while (dec != 0) {
+        bin += (dec % 2) * i;
+        dec /= 2;
+        i *= 10;
     }
-
-    // Affichage du résultat
-    std::cout << "Le nombre en binaire est : ";
-    for (int j = i - 1; j >= 0; j--) {
-        std::cout << bin[j];
-    }
-    std::cout << std::endl;
-
-    return 0;
-
+    return bin;
 }
 
-int main(){
-    int dec = 42;
-    int bin[8] = {0}; // un tableau de 8 entiers initialisé à 0
+// Fonction pour convertir un nombre décimal en octal
+long long DecToOct(int dec) {
+    long long oct = 0;
+    int i = 1;
+    while (dec != 0) {
+        oct += (dec % 8) * i;
+        dec /= 8;
+        i *= 10;
+    }
+    return oct;
+}
 
-    decimalToBinary(dec, bin);
+// Fonction pour convertir un nombre décimal en hexadécimal
+string DecToHex(int dec) {
+    string hex = "";
+    string hex_table = "0123456789ABCDEF";
+    while (dec != 0) {
+        int rem = dec % 16;
+        hex = hex_table[rem] + hex;
+        dec /= 16;
+    }
+    if (hex == "") {
+        hex = "0";
+    }
+    return hex;
+}
 
-    
+int main() {
+    // int dec;
+    // cout << "Entrez un nombre décimal : ";
+    // cin >> dec;
+
+    // // Conversion en binaire
+    // long long bin = DecToBin(dec);
+    // cout << "Le nombre binaire correspondant est : " << bin << endl;
+
+    // // Conversion en octal
+    // long long oct = DecToOct(dec);
+    // cout << "Le nombre octal correspondant est : " << oct << endl;
+
+    // // Conversion en hexadécimal
+    // string hex = DecToHex(dec);
+    // cout << "Le nombre hexadécimal correspondant est : " << hex << endl;
+
+    return 0;
 }
