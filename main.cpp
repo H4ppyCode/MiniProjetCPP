@@ -17,12 +17,12 @@ int main() {
 
     std::cout << "--Convertisseur de nombre ( Base : 2, 8, 10, 16) -- \n \n";
 
-    std::cout << "Entrée la base du nombre à convertir: ";
+    std::cout << "Entrer la base du nombre à convertir: ";
     std::cin >> baseBefore;
 
     while (verification(baseBefore)){
             std::cout << "La base du nombre à convertir est mauvaise\n";
-            std::cout << "Entrée la base du nombre à convertir: ";
+            std::cout << "Entrez la base du nombre à convertir: ";
             std::cin >> baseBefore;
     }
 
@@ -31,7 +31,7 @@ int main() {
 
         while (verification(baseAfter)){
             std::cout << "La base du nombre apres conversion est mauvaise\n";
-            std::cout << "Entrée la base du nombre apres conversion: ";
+            std::cout << "Entrez la base du nombre apres conversion: ";
             std::cin >> baseAfter;
     }
 
@@ -43,7 +43,7 @@ int main() {
     
       {
         case 2:
-            std::cout << "Entrée le nombre à convertir: ";
+            std::cout << "Entrez le nombre à convertir: ";
             std::cin >> number;
             if (baseAfter == 8) {std::cout << "New number : " << BinToOct(number);} //long long -> long long int
             if (baseAfter == 10) {std::cout << "New number : " << BinToDec(number);;} // long long -> int
@@ -51,14 +51,14 @@ int main() {
             else {std::cout << "Error ";}
             break;
         case 8:
-            std::cout << "Entrée le nombre à convertir: ";
+            std::cout << "Entrez le nombre à convertir: ";
             std::cin >> number;
             if (baseAfter == 2) {std::cout << "New number : " << OctToBin(number);} // long long -> int
             if (baseAfter == 10) {std::cout << "New number : " << OctToDec(number);} // long long -> int
             if (baseAfter == 16) {std::cout << "New number : " << OctToHex(number);} // long long -> strinf
             break;
         case 10:
-            std::cout << "Entrée le nombre à convertir: ";
+            std::cout << "Entrez le nombre à convertir: ";
             std::cin >> numberDec;
             if (baseAfter == 2) { std::cout << "New number : " << DecToBin(numberDec); } // int -> long long
             if (baseAfter == 8) { std::cout << "New number : " << DecToOct(numberDec); } // int -> long long
