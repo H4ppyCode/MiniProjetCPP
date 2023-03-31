@@ -3,10 +3,6 @@
 #include "functions/dec.h"
 #include "functions/hex.h"
 #include "functions/octo.h"
-#include "functions/bin.cpp"
-#include "functions/dec.cpp"
-#include "functions/hex.cpp"
-#include "functions/octo.cpp"
 
 float verification( long long value){
     if (value == 2 || value == 8 || value == 10 || value == 16){
@@ -41,38 +37,58 @@ int main() {
 
     
     long long number;
+    int numberDec;
+
     switch ( baseBefore )
+    
       {
         case 2:
-            std::cout << "Entrée la base du nombre apres conversion: ";
+            std::cout << "Entrée le nombre à convertir: ";
             std::cin >> number;
-            
-            if (baseAfter == 8) {std::cout << BinToOct(1010);} //long long -> long long int
-            if (baseAfter == 10) {std::cout << " 2To10 ";} // long long -> int
-            if (baseAfter == 16) {std::cout << " 2To16 ";} // long long -> string
+            if (baseAfter == 8) {std::cout << "New number : " << BinToOct(number);} //long long -> long long int
+            if (baseAfter == 10) {std::cout << "New number : " << BinToDec(number);;} // long long -> int
+            if (baseAfter == 16) {std::cout << "New number : " << BinToHex(number);;} // long long -> string
+            else {std::cout << "Error ";}
             break;
         case 8:
-            if (baseAfter == 2) {} // long long -> int
-            if (baseAfter == 10) {} // long long -> int
-            if (baseAfter == 16) {} // long long -> strinf
+            std::cout << "Entrée le nombre à convertir: ";
+            std::cin >> number;
+            if (baseAfter == 2) {std::cout << "New number : " << OctToBin(number);} // long long -> int
+            if (baseAfter == 10) {std::cout << "New number : " << OctToDec(number);} // long long -> int
+            if (baseAfter == 16) {std::cout << "New number : " << OctToHex(number);} // long long -> strinf
             break;
         case 10:
-            if (baseAfter == 2) {} // int -> long long
-            if (baseAfter == 8) {} // int -> long long
-            if (baseAfter == 16) {} //int -> String
+            std::cout << "Entrée le nombre à convertir: ";
+            std::cin >> numberDec;
+            if (baseAfter == 2) { std::cout << "New number : " << DecToBin(numberDec); } // int -> long long
+            if (baseAfter == 8) { std::cout << "New number : " << DecToOct(numberDec); } // int -> long long
+            if (baseAfter == 16) { std::cout << "New number : " << DecToHex(numberDec); } //int -> String
             break;
         case 16:
-            if (baseAfter == 2) {} // char -> long long 
-            if (baseAfter == 8) {} // char -> long long int
-            if (baseAfter == 10) {} // string -> int
+            if (baseAfter == 2) {
+                char charHex[200];
+                std::cout << "Entrée le nombre à convertir: ";
+                std::cin >> charHex;
+                std::cout << "New number : " << HexToBin(charHex);
+            } // char -> long long 
+            if (baseAfter == 8) {
+                char charHex[200];
+                std::cout << "Entrée le nombre à convertir: ";
+                std::cin >> charHex;
+                std::cout << "New number : " << HexToOct(charHex);
+            } // char -> long long int
+            if (baseAfter == 10) {
+                std::string charDec;
+                std::cout << "Entrée le nombre à convertir: ";
+                std::cin >> charDec;
+                std::cout << "New number : " << HexToDec(charDec);
+            } // string -> int
             break;
          default:
             std::cout << " Error ";
       }
 
     std::cout << " \n \n ---Fin du Jeux--\n" ;
-    std::cout << " La base du nombre à converir = " << baseBefore << "\n" ;
-    std::cout << " La base du nombre apres conversion = " << baseAfter << "\n" ;
-        std::cout << "------ \n \n " ;
     return 0;
 }
+
