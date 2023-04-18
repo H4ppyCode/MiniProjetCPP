@@ -26,12 +26,12 @@ int main() {
             std::cin >> baseBefore;
     }
 
-    std::cout << "Entrée la base du nombre apres conversion: ";
+    std::cout << "Entrée la base du nombre après conversion: ";
     std::cin >> baseAfter;
 
         while (verification(baseAfter)){
-            std::cout << "La base du nombre apres conversion est mauvaise\n";
-            std::cout << "Entrez la base du nombre apres conversion: ";
+            std::cout << "La base du nombre après conversion est mauvaise\n";
+            std::cout << "Entrez la base du nombre après conversion: ";
             std::cin >> baseAfter;
     }
 
@@ -53,35 +53,35 @@ int main() {
         case 8:
             std::cout << "Entrez le nombre à convertir: ";
             std::cin >> number;
-            if (baseAfter == 2) {std::cout << "New number : " << OctToBin(number);} // long long -> int
-            if (baseAfter == 10) {std::cout << "New number : " << OctToDec(number);} // long long -> int
-            if (baseAfter == 16) {std::cout << "New number : " << OctToHex(number);} // long long -> strinf
+            if (baseAfter == 2) {std::cout << "Nouveau nombre  : " << OctToBin(number);} // long long -> int
+            if (baseAfter == 10) {std::cout << "Nouveau nombre  : " << OctToDec(number);} // long long -> int
+            if (baseAfter == 16) {std::cout << "Nouveau nombre  : " << OctToHex(number);} // long long -> strinf
             break;
         case 10:
             std::cout << "Entrez le nombre à convertir: ";
             std::cin >> numberDec;
-            if (baseAfter == 2) { std::cout << "New number : " << DecToBin(numberDec); } // int -> long long
-            if (baseAfter == 8) { std::cout << "New number : " << DecToOct(numberDec); } // int -> long long
-            if (baseAfter == 16) { std::cout << "New number : " << DecToHex(numberDec); } //int -> String
+            if (baseAfter == 2) { std::cout << "Nouveau nombre  : " << DecToBin(numberDec); } // int -> long long
+            if (baseAfter == 8) { std::cout << "Nouveau nombre  : " << DecToOct(numberDec); } // int -> long long
+            if (baseAfter == 16) { std::cout << "Nouveau nombre  : " << DecToHex(numberDec); } //int -> String
             break;
         case 16:
             if (baseAfter == 2) {
                 char charHex[200];
                 std::cout << "Entrer le nombre à convertir: ";
                 std::cin >> charHex;
-                std::cout << "New number : " << HexToBin(charHex);
+                std::cout << "Nouveau nombre  : " << HexToBin(charHex);
             } // char -> long long 
             if (baseAfter == 8) {
                 char charHex[200];
                 std::cout << "Entrer le nombre à convertir: ";
                 std::cin >> charHex;
-                std::cout << "New number : " << HexToOct(charHex);
+                std::cout << "Nouveau nombre  : " << HexToOct(charHex);
             } // char -> long long int
             if (baseAfter == 10) {
                 std::string charDec;
                 std::cout << "Entrer le nombre à convertir: ";
                 std::cin >> charDec;
-                std::cout << "New number : " << HexToDec(charDec);
+                std::cout << "Nouveau nombre : " << HexToDec(charDec);
             } // string -> int
             break;
          default:
